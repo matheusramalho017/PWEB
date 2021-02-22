@@ -100,7 +100,8 @@
 <p align="justify">O CORS (Cross-origin Resource Sharing) é um mecanismo utilizado pelos navegadores para compartilhar recursos entre diferentes origens. O CORS é uma especificação do W3C e faz uso de headers do HTTP para informar aos navegadores se determinado recurso pode ser ou não acessado.
 
 <h3>E como funciona?</h3>
-Na teoria e prática, os cookies de autenticação são usados para informar ao servidor que você está logado, e eles são enviados automaticamente com qualquer solicitação que você faça para esse servidor.
+
+<p align="justify">Na teoria e prática, os cookies de autenticação são usados para informar ao servidor que você está logado, e eles são enviados automaticamente com qualquer solicitação que você faça para esse servidor.
 Digamos que você esteja conectado ao Facebook e use cookies de autenticação. Você clica em um link que te redireciona para determinado site. Um script dentro desse site faz uma solicitação do lado do cliente para o facebook.com no qual envia o seu cookie de autenticação.
 Em um mundo sem CORS, eles podem fazer alterações em sua conta sem que você saiba. Até que, é claro, eles postem esse link em sua linha do tempo, e todos os seus amigos cliquem nele, e então publiquem o mesmo em todas as contas de seus amigos e então o ciclo continua em um esquema maligno que conquista todos os usuários do Facebook, e o mundo é consumido por ESSE determinado website.
 
@@ -110,16 +111,17 @@ Eles podem tentar, mas não funciona porque o navegador simplesmente ignora a al
 
 Ok, mas e se esse determinado website fizesse a solicitação do lado do servidor?
 Nesse caso, eles poderiam ignorar o CORS, mas não funcionaria porque não teremos um cookie de autenticação para a requisição. O script precisaria ser executado no lado do cliente para obter acesso aos cookies do lado do cliente.</p>
-
+</p>
 
 
 <h3>2.3 - Content Security Policy (CSP)</h3>
 
-Para entender o CSP, primeiro precisamos falar sobre uma das vulnerabilidades mais comuns na Web: XSS, que significa cross-site scripting (scripting entre sites, outro acrônimo).
+<p align="justify">Para entender o CSP, primeiro precisamos falar sobre uma das vulnerabilidades mais comuns na Web: XSS, que significa cross-site scripting (scripting entre sites, outro acrônimo).
 XSS é quando alguma pessoa malvada injeta JavaScript em seu código do lado do cliente. Você pode pensar:
 O que eles vão fazer? Alterar uma cor de vermelho para azul?
 Vamos supor que alguém tenha injetado com sucesso o JavaScript no código do lado do cliente de um site que está sendo visitado:
 O que eles poderiam fazer que seria malicioso?
+</p>
 
 <ul>
     <li>Eles poderiam fazer solicitações HTTP para outro site fingindo ser alguém.
@@ -138,12 +140,13 @@ O CSP tenta evitar que isso aconteça limitando:
     <li>Onde as requisições podem ser feitos, etc.
 </ul>
 
-
+<p align="justify">
 Então, como isso funciona?
 
 Quando você clica em um link ou digita uma URL na barra de endereços do seu navegador, o seu navegador faz uma solicitação GET. Eventualmente, ele faz o caminho para um servidor que serve HTML junto com alguns cabeçalhos HTTP. Se você está curioso sobre quais cabeçalhos você recebe, abra a guia Network no console e visitar alguns sites.
 
 Algumas diretivas que podem ser usadas:
+</p>
 
 <ul>
     <li>default-src: restringe todas as outras diretivas de CSP que não estão listadas explicitamente.
@@ -158,6 +161,7 @@ Se nenhum cabeçalho CSP estiver presente, tudo será executado e nada será res
 
 <h3>2.4 - HTTPS ou HTTP</h3>
 
+<p align="justify">
 Em essência, o HTTPS é bastante simples. HTTPS é criptografado e HTTP não é.
 MITM significa Man in the Middle.
 
@@ -165,6 +169,7 @@ Se alguém estiver usando Wi-Fi público sem senha em uma cafeteria, é muito f�
 Ok, mas como é que o meu computador e o servidor sabem como criptografar/descriptografar mas esse MITM não?
 
 É aí que entra o SSL (Secure Sockets Layer) e, mais recentemente, o TLS (Transport Layer Security). O TLS assumiu o controle do SSL em 1999 como a tecnologia de criptografia usada no HTTPS. 
+</p>
 
 <h3>2.5 - HTTP Strict-Transport-Security (HSTS)</h3>
 
@@ -177,10 +182,11 @@ strict-transport-security: max-age=15552000; preload
     <li>preload: não é importante para nossos propósitos. É um serviço hospedado pelo Google e não faz parte da especificação do HSTS.
 </ul>
 
+<p align="justify">
 Este cabeçalho só se aplica se alguém acessou o site usando HTTPS. Se essa pessoa acessou o site via HTTP, o cabeçalho será ignorado. A razão é que, simplesmente, o HTTP é tão inseguro que não é confiável.
 
 Vamos usar o exemplo do Facebook para ilustrar melhor como isso é útil na prática. Algém está acessando facebook.com pela primeira vez e essa pessoa sabe que o HTTPS é mais seguro que o HTTP, então você o acessa via HTTPS https://facebook.com. Quando o navegador recebe o HTML, ele recebe o cabeçalho acima, que informa ao navegador para forçar o redirecionamento para HTTPS para solicitações futuras. Um mês depois, alguém envia um link para o Facebook usando HTTP http://facebook.com, e essa pessoa clica nele. Como um mês é menor do que os 15552000 segundos especificados pela diretiva max-age, o navegador enviará a solicitação como HTTPS, evitando um potencial ataque do MITM
-
+</p>
 
 
 <h2>3 - CONCLUSÃO.</h2>
