@@ -1,0 +1,107 @@
+body 
+{
+  background: black url(FATEC.jpg);
+  background-repeat: repeat;
+  font-family: "Arial", "Lucida Sans Unicode", Verdana,
+  sans-serif;
+  line-height: 3.5;
+}
+
+
+p { 
+    color: rgb(252, 252, 252); 
+}
+
+h2 { 
+    color: rgb(252, 252, 252); 
+}
+
+li { 
+    font-size: 20px;
+    color: rgb(252, 252, 252); 
+}
+.container 
+    {
+    margin: 0 auto;
+    width: 960px;
+    }
+    
+    article
+    {
+    background-color: rgb(10, 3, 3);
+    border: 1px solid #CCC;
+    border-color: #CCC #999 #999 #CCC;
+    margin-bottom: 20px;
+    padding: 10px; 
+    }
+    
+    
+    article h2 
+    {
+    border-bottom: 1px dashed #d60404;
+    margin: 0;
+    }
+    
+    article img
+     {
+    border: 1px solid #3000a1;
+    float: left;
+    margin: 10px 10px 0 0;
+    padding: 2px;
+    width: 160px;
+    height: 160px;
+    }
+    
+    article a 
+    {
+    color: #2C88A7;
+    font-weight: bold;
+    }
+    
+    header h1 a {
+    color: #c23d00;
+    text-decoration: none;
+    margin-left:250px;
+    }
+    
+    header h1 a:hover 
+    { 
+    background-color: #990a00;
+    color: #FFF;
+    }
+    
+    .clear 
+    { 
+    clear: both;
+    }
+    
+    footer
+     {
+    font-size: 12px;
+    text-align: center;
+    }
+    
+    section
+     {
+    float: left;
+    width: 660px;
+    }
+    
+    aside {
+    background-color: #888888;
+    border: 1px solid #c9bc8f6c;
+    padding: 10px;
+    float: right;
+    width: 260px;
+    }
+    
+    aside h3 {
+    font-size: 14px;
+    margin-top: 0;
+    }
+    
+    aside ol {
+    font-size: 12px;
+    }
+    
+    
