@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Eventos de janela</title>
+</head>
+
+<body>
+    <div onmouseover="mMover()" onmouseout="mOut()" onclick="mClick()"> Janelas </div>
+	<script>
+		function mMover(obj)
+        {
+			obj.innerHTML = "Janela aberta";
+		}
+
+		function mOut(obj) 
+        {
+			obj.innerHTML = "Janela Fechada";
+		}
+
+		
+		function mClick(obj) 
+        {
+			obj.innerHTML = "Quebrou a janela!!!!!!";
+		}
+        
+	</script>
+
+<a href="#" onmouseover="document.images[0].src='aberto.jpg';" onmouseout="document.images[0].src='fechado.jpg';" onclick="document.images[0].src='quebrado.jpg';">
+    <img src="fechado.jpg" width="250">
+
+
+
+</body>
+
+</html>
