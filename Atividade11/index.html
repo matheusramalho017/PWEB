@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Maiúscula e minúscula</title>
+    <script>
+ 
+    var chkMaiusculo = document.getElementById("chkMaiusculo");
+    var chkMinusculo = document.getElementById("chkMinusculo");
+
+document.getElementById("Submit").onclick = function ()
+ {
+    if (chkMaiusculo.checked) 
+    {
+        if (document.forms.formulario1.elements.idMsg.value == "" || document.forms.formulario1.elements.idMsg.checked.length)
+         {
+                 document.getElementById("idMsg").toUpperCase();
+                 return false;
+            }
+        }
+
+        if (chkMinusculo.checked) 
+    {
+        if (document.forms.formulario1.elements.idMsg.value == "" || document.forms.formulario1.elements.idMsg.checked.length)
+         {
+                 document.getElementById("idMsg").toLowerCase();
+                 return false;
+            }
+        }
+}
+    </script>
+
+
+</head>
+
+<body>
+    <form action="teste" method="POST" name="formulario1" id="formulario1" onsubmit="return validarDados();">
+
+        <div id="principal" width=200 heigth=200 align=center>
+
+            Digite aqui qualquer coisa:
+            <input name="idMsg" type="text" id="idMsg" size="52" maxlength="150">
+            <br>
+
+                <input type="checkbox" id="chkMaiusculo" value="on">Converte para maiusculo
+            </p>
+            <p>
+                <input type="checkbox" id="chkMinusculo" value="on">Converte para minusculo
+            </p>
+            <p>
+
+            <input name="Submit" type="submit" form="formulario1" value="Submit">
+          
+        </div>
+    </form>
+</body>
+
+</html>
