@@ -29,6 +29,18 @@
                 return false;
             }
 
+            if (document.forms.formulario1.elements[0].value == "" || document.forms.formulario1.elements[0].length < 10) {
+                alert("Preencha campo NOME corretamente 9com mais de 10 caracteres!");
+                document.forms.formulario1.elements[0].focus();
+                return false;
+            };
+
+            if (document.forms.formulario1.elements[0].value == "" || document.forms.formulario1.elements[0].length < 10) {
+                alert("Preencha campo NOME corretamente 9com mais de 10 caracteres!");
+                document.forms.formulario1.elements[0].focus();
+                return false;
+            };
+
             return true;
         }
     </script>
@@ -38,7 +50,7 @@
 
 <body>
     <form action="teste" method="POST" name="formulario1" id="formulario1" onsubmit="return validarDados();">
-
+        <h1><center>Fórmulario principal</h1></center>
         <div id="principal" width=200 heigth=200 align=center>
             Nome :
             <input name="idNome" type="text" id="idNome" size="52" maxlength="150">

@@ -13,7 +13,7 @@ document.getElementById("Submit").onclick = function ()
  {
     if (chkMaiusculo.checked) 
     {
-        if (document.forms.formulario1.elements.idMsg.value == "" || document.forms.formulario1.elements.idMsg.checked.length)
+        if (document.forms.formulario1.elements.idMsg.value == "" || document.forms.formulario1.elements.chkMaiusculo.checked)
          {
                  document.getElementById("idMsg").toUpperCase();
                  return false;
@@ -22,7 +22,7 @@ document.getElementById("Submit").onclick = function ()
 
         if (chkMinusculo.checked) 
     {
-        if (document.forms.formulario1.elements.idMsg.value == "" || document.forms.formulario1.elements.idMsg.checked.length)
+        if (document.forms.formulario1.elements.idMsg.value == "" || document.forms.formulario1.elements.chkMinusculo.checked)
          {
                  document.getElementById("idMsg").toLowerCase();
                  return false;
