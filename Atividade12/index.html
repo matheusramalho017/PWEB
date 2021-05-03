@@ -6,7 +6,8 @@
     <title>Formulario 1.0</title>
     <script>
       
-        function validarDados() {
+        function validarDados() 
+        {
             
             // usando a posicao no formulario
             if (document.forms.formulario1.elements[0].value == "" || document.forms.formulario1.elements[0].length < 10) {
@@ -55,12 +56,15 @@
             var radios = document.getElementsByValue("Limpar");
             for (var i = 0; i < radios.length; i++) 
             {
-            if (radios[i].checked) {
+            if (radios[i].checked) 
+            {
             console.log("Escolheu: " + radios[i].value);
+            }
+            }
         }
     }
-};
-
+    
+}
             return true;
         }
     </script>
@@ -100,5 +104,4 @@
         </div>
     </form>
 </body>
-
 </html>
