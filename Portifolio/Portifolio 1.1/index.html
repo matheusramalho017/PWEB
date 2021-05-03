@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTIFOLIO: MATHEUS RAMALHO</title>
+
+    <link rel="stylesheet" type="text/css" href="CSS/estilo.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="CSS/normalize.css" media="screen" />
+
+    <style>
+
+        html, body 
+        {
+            flex-grow: 1;
+            font-family: sans-serif;
+        }
+
+        main 
+        {
+            
+            flex-grow: 1;
+            text-align: center;
+        }
+
+      button 
+      {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-family: inherit;
+          cursor: pointer;
+      }
+
+      p {
+        font-weight: bold;
+         margin-bottom: 2.5em;
+         max-width: 1000px;
+      }
+      
+      .botao 
+      {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          flex-grow: 1;
+          display: inline-block;
+          margin: 1em;
+          padding: 0.5em 1em;
+          text-decoration: none;
+          background: #140c44;
+          color: white;
+          border: 0;
+          text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+          border-radius: 3px;
+          box-shadow: 2px 2px 0 1px #ffffff;
+          width: 130px;
+          margin-right: 43px;
+          margin-left:  110px;
+          font-size: 20px;
+
+          transition: box-shadow 0,3s ease, transform 0,3s ease;
+      }
+
+      #imgpos 
+      {
+          
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position:absolute;
+		left:50%;
+		top:20%;
+		margin-left:-600px;
+		margin-top:0px;
+        }
+ 
+      .botao:active 
+      {
+          
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          box-shadow: 0 0 0 0 blue, inset 3px 3px 3px blue;
+          translate: translate(3px, 3px);
+      }
+    </style>
+
+</head>
+
+
+<body>
+
+    
+
+<main>
+
+    <form>
+    <font color="#6ba1d8">
+        <center>
+            <h1>
+                Matheus Aparecido Ramalho
+            </h1>
+        </center>
+    </font>
+    </form>
+
+    <br>
+
+   <font color="white">
+        <h3>
+            Olá, me chamo Matheus Ramalho e atualmente faço ADS 
+            na faculdade Fatec Sorocaba. Estou no exato momento no quarto
+            semestre. Também fiz Informática para Internet na ETEC. Até agora passei por várias partes da programação como C, Banco de Dados, C# e Programação Web.
+        </h3>
+   </font>
+
+
+    <img width="360" src="img/download.png" id="imgpos">
+
+
+    <a href="http://www.fatecsorocaba.edu.br">
+    <img width="100" src="img/fatec.png" id="fatec">
+    </a>
+    </div>
+
+  
+        <font color="white">
+            <h2>
+                Trabalhos feitos:
+            </h2>
+       </font>
+       
+    <div id="slider">
+        <img class="selected" src="img/personalwebsite.png" alt="Image1">
+        <img src="img/trab1.png" alt="Image2">
+        <img src="img/trab2.png" alt="Image3">
+    </div>
+
+    <script src="js/script.js"> </script>
+    
+
+    <font color="white">
+    
+    <nav>
+        <h4>Habilidades e competências</h4>
+        <ul>
+            <li>C</li>
+            <li>C#</li>
+            <li>PHP</li>
+            <li>BD</li>
+            <li>CSS</li>
+            <li>Inteligência Artificial</li>
+        </ul>    
+    </nav>
+</font>
+
+<button class="botao">
+    <a href="https://www.linkedin.com/in/matheus-ramalho-b18612167/">
+    <font color="white">
+        Linkedin
+    </font>
+    </a>
+</button>
+
+<button class="botao">
+    <a href="https://www.facebook.com/math.ramalho">
+    <font color="white">
+        Facebook
+    </font>
+    </a>
+</button>
+
+</main>
+
+</body>
+</html>

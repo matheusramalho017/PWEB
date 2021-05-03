@@ -6,21 +6,24 @@
 </head>
 
 <body>
-    <div onmouseover="mMover()" onmouseout="mOut()" onclick="mClick()"> Janelas </div>
+    <div onmouseover="mMover(this)" onmouseout="mOut(this)" onclick="mClick(this)">Janela fechada</div>
 	<script>
 		function mMover(obj)
         {
+            
 			obj.innerHTML = "Janela aberta";
 		}
 
 		function mOut(obj) 
         {
+           
 			obj.innerHTML = "Janela Fechada";
 		}
 
 		
 		function mClick(obj) 
         {
+           
 			obj.innerHTML = "Quebrou a janela!!!!!!";
 		}
         

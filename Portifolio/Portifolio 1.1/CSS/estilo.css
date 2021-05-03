@@ -1,0 +1,158 @@
+body
+{
+    background-image: url(fundo.jpg);
+    margin:0;
+    padding:0;
+}
+
+.main{
+    max-width:1200px;
+    margin:0 auto;
+    overflow:hidden;
+    background:lightgray;
+}
+
+h1
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 auto;
+    width: 600px;
+    height: 33px;
+    /* Para ver as bordas do formulário */
+    padding: 0.4em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    background-color: rgb(0, 0, 0); 
+}
+
+
+h2
+{  
+    flex-grow: 1;
+    background-color: rgb(0, 0, 0); 
+    border:2px solid #039; 
+    padding: 7px; 
+    text-align:justify;
+    width: 250px;
+    height: 460px;
+    position:absolute;
+    float: right;
+    margin-left:+970px;
+    margin-top: -200px;
+}
+
+
+h3
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    background-color: rgb(0, 0, 0); 
+    border:2px solid #039; 
+    padding: 10px 10px 20px 20px; 
+    text-align:justify;
+    width: 420px;
+    height: 150px;
+    letter-spacing: 0.3px;
+    margin-left:+474px;
+	margin-top:40px;
+}
+
+nav
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 2;
+    background-color:black;
+    border:2px solid #039; 
+    padding: 7px; 
+    text-align:left;
+    width: 230px;
+    height: 190px;
+    letter-spacing: 0.3px;
+    margin-left:+573px;
+	margin-top:0px;
+}
+
+nav ul
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0%;
+    width: 100%;
+}
+
+nav ul li
+{
+    text-align: center;
+    width: 100%;
+}
+
+div
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#fatec
+
+{   
+
+    flex-grow: 1;
+    position:absolute;
+    height: 110px;
+    width: 180px;
+    float: right;
+    margin-left:+380px;
+    margin-top: -330px;
+}
+
+#slider 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    position:absolute;
+    float: right;
+    width: 230px;
+    height: 150px;
+    margin-left:+990px;
+    margin-top: -130px;
+
+
+}
+
+#slider img
+{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 800ms;
+}
+
+#slider img.selected 
+{ 
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}
