@@ -29,17 +29,37 @@
                 return false;
             }
 
-            if (document.forms.formulario1.elements[0].value == "" || document.forms.formulario1.elements[0].length < 10) {
-                alert("Preencha campo NOME corretamente 9com mais de 10 caracteres!");
-                document.forms.formulario1.elements[0].focus();
+            if (document.forms.formulario1.elements.nao.radio) 
+            {
+                alert("Que bom que você voltou a visitar esta página");
                 return false;
             };
 
-            if (document.forms.formulario1.elements[0].value == "" || document.forms.formulario1.elements[0].length < 10) {
-                alert("Preencha campo NOME corretamente 9com mais de 10 caracteres!");
-                document.forms.formulario1.elements[0].focus();
+            if (document.forms.formulario1.elements.sim.radio) 
+            {
+                alert("Volte sempre à está página!”");
                 return false;
             };
+
+            document.getElementById("Submit").onclick = function() 
+            {
+            var radios = document.getElementsByValue("Enviar");
+            for (var i = 0; i < radios.length; i++) 
+            {
+            if (radios[i].checked) {
+            console.log("Escolheu: " + radios[i].value);
+        }
+
+        document.getElementById("Reset").onclick = function() 
+            {
+            var radios = document.getElementsByValue("Limpar");
+            for (var i = 0; i < radios.length; i++) 
+            {
+            if (radios[i].checked) {
+            console.log("Escolheu: " + radios[i].value);
+        }
+    }
+};
 
             return true;
         }
@@ -66,11 +86,11 @@
             <fieldset>
                 <legend> Primeira vez nessa página?: </legend>
                   <div>
-                    <input type = "checkbox" id = "sim" name = "escolha" valor = "sim">
+                    <input type = "radio" id = "sim" name = "escolha" valor = "sim">
                     <label for = "sim"> Sim </label>
                   </div>
                   <div>
-                    <input type = "checkbox" id = "nao" name = "escolha" valor = nao">
+                    <input type = "radio" id = "nao" name = "escolha" valor = "nao">
                     <label for = "nao"> Não </label>
                   </div>
             <br>
