@@ -18,12 +18,11 @@ if(select.selectedIndex==1)
         }
 
 
-        function abrirjanela(select) 
+        function abreJanela() 
         {
-        var value = select.options[select.selectedIndex].value;
-        window.open(value, 'newwindow')
+         
+            novaJanela = window.open("ads.html", "janela1", "width = 600, height = 300");
         }
-
 
     </script>
 
@@ -36,7 +35,12 @@ if(select.selectedIndex==1)
         <option value="Marketing" >Marketing</option>
     </select>
 
-
+     <p id="abrir"></p>
+    <script>
+        abreJanela();
+        document.getElementById("teste").innerHTML = "nome:" + window.navigator.appName + "  versão:" + window.navigator.appVersion;
+  
+    </script>
 
 </body>
 </html>
