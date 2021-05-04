@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de curso da Fatec Sorocaba</title>
+</head>
+
+
+<script>
+
+if(select.selectedIndex==1)
+{
+            alert("Deseja realmente abrir esse curso?");
+            form.st_contrato.focus();
+            return false;
+        }
+
+
+        function abrirjanela(select) 
+        {
+        var value = select.options[select.selectedIndex].value;
+        window.open(value, 'newwindow')
+        }
+
+
+    </script>
+
+<body>
+    
+    <select onchange="openWindow(this)">
+        <option value="" >Selecione alguma opção</option>
+        <option value="Análise e Desenvolvimento de Sistemas" >ADS</option>
+        <option value="Logística" >Logística</option>
+        <option value="Marketing" >Marketing</option>
+    </select>
+
+
+
+</body>
+</html>
